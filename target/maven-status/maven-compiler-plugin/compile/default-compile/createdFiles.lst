@@ -1,0 +1,5 @@
+com\theatreportal\entities\TheaterDetails.class
+com\theatreportal\TheaterPortalCoreApplication.class
+com\theatreportal\repository\MovieDetailsRepository.class
+com\theatreportal\entities\MovieDetails.class
+com\theatreportal\controller\TheaterMovieController.class
