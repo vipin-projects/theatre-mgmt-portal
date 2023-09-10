@@ -28,4 +28,7 @@ public class MovieDetails {
     List<String> directors;
     String rating;
     Date releaseDate;
+    Long duration; //in minutes
+
+    TheaterDetails theaterDetails;
 }
