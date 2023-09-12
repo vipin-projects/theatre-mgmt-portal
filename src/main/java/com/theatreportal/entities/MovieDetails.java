@@ -1,3 +1,6 @@
+/**
+ * This is entity class for Movie
+ */
 package com.theatreportal.entities;
 
 import lombok.Getter;
@@ -29,6 +32,6 @@ public class MovieDetails {
     String rating;
     Date releaseDate;
     Long duration; //in minutes
-
-    TheaterDetails theaterDetails;
+    @OneToMany(mappedBy = "movieDetails", cascade = CascadeType.ALL)
+    List<ScreenDetails> screens;
 }

@@ -1,10 +1,12 @@
+/**
+ * This entity class is for theaters
+ */
 package com.theatreportal.entities;
 
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.sql.Time;
 import java.util.List;
 
 @Getter
@@ -16,12 +18,11 @@ public class TheaterDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int theaterId;
     String theaterName;
+    String address;
+    String coreArea;
     String city;
-    int noOfScreens;
-    Time firstShow;
-    Time lastShow;
+    String zipCode;
 
-    @OneToMany
-    @JoinColumn(name="screenId")
+    @OneToMany(mappedBy = "theaterDetails", cascade = CascadeType.ALL)
     List<ScreenDetails> screens;
 }

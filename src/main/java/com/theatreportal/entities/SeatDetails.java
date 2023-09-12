@@ -1,3 +1,6 @@
+/**
+ * This entity class is for seats
+ */
 package com.theatreportal.entities;
 
 import lombok.Getter;
@@ -11,10 +14,11 @@ import javax.persistence.*;
 @Table(name = "seat_details")
 public class SeatDetails {
     @Id
-    String seatId;
-    int row;
-    @ManyToOne()
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    int seatId;
+    int rowId;
+    int seatNo;
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="screenId")
     ScreenDetails screenDetails;
-    int seatNo;
 }
